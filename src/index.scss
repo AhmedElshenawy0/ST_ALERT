@@ -1,0 +1,365 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Globale Styles
+
+// Import Poppins Font
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+$main-color: rgba(32, 32, 32, 1);
+$black-color: #181818;
+$main-bg: #313131;
+$blue-color: #53acff;
+$filter-box: #202020;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: blue;
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(32, 32, 32);
+}
+
+.alert {
+  background-color: $main-color;
+
+  @media (max-width: 1200px) {
+    margin-left: 45px;
+  }
+  .alertCom::-webkit-scrollbar {
+    width: 4px;
+  }
+  small {
+    font-size: 15px;
+
+    @media (max-width: 767px) {
+      font-size: 11px;
+    }
+  }
+  /* Handle */
+  .alertCom::-webkit-scrollbar-thumb {
+    background: #424242;
+    border-radius: 10px;
+  }
+  .alert-text {
+    font-size: 48px;
+    @media (max-width: 1200px) {
+      font-size: 24px;
+    }
+  }
+  .alert-item {
+    font-size: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 10px;
+    padding-bottom: 7px;
+
+    .aler-holder {
+      gap: 35px;
+    }
+    svg {
+      width: 24px;
+    }
+    @media (max-width: 1200px) {
+      font-size: 10px;
+      padding-left: 11px;
+      padding-right: 11px;
+      .aler-holder {
+        gap: 10px;
+      }
+      svg {
+        width: 13px;
+        // height: 10px;
+      }
+    }
+  }
+  h1 {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 5px;
+      height: 100%;
+      border-radius: 6px;
+      background: $blue-color;
+      left: -14px;
+    }
+  }
+  .filter-btn {
+    display: block;
+
+    @media (min-width: 992px) {
+      display: none;
+    }
+  }
+  .search {
+    background-color: $main-bg;
+  }
+  .item {
+    background-color: $main-bg;
+  }
+}
+.nav-container {
+  background-color: $black-color;
+}
+  .nav-container {
+    .nav-alert {
+      margin: 0 auto;
+    }
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    .user-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 14px;
+    }
+    .user {
+      .user-name {
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 22.5px;
+        color: #ffffff;
+      }
+      .user-info {
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 19.5px;
+        color: #979797;
+      }
+    }
+
+    box-shadow: 10px 4px 21.1px 0px #00000061;
+    width: 180px;
+    z-index: 99999;
+    transition: 0.4s linear;
+
+    .user-img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .image {
+      width: calc(100% - 56px);
+      margin-left: auto;
+      margin-right: auto;
+
+    }
+    p {
+      font-size: 19px;
+      font-weight: 600;
+      line-height: 28.5px;
+
+    }
+  }
+
+.nav-expand {
+  background-color: $black-color;
+
+  .nav-alert {
+    margin: 0 auto;
+  }
+  .user-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .image {
+    // width: calc(100% - 56px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  //==========
+  box-shadow: none;
+
+  width: 47px;
+transition: 0.4s;
+  .image {
+    width: 38.32px;
+  }
+  .user {
+    display: none;
+  }
+  p {
+    display: none;
+  }
+}
+.filter {
+  background-color: $black-color;
+  border-radius: 8px;
+  height: calc(100%);
+  overflow: hidden;
+
+  .filter-box {
+    background-color: $filter-box;
+    height: 91px;
+
+    @media (max-width: 1200px) {
+      height: 26px;
+      margin-bottom: 0px;
+    }
+  }
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    display: block;
+
+    @media (min-width:992px) {
+        display: none;
+    }
+
+  }
+  .stock {
+    font-size: 15px;
+
+    @media (max-width: 1200px) {
+      font-size: 12.8px;
+    }
+  }
+  .industry-h2 {
+    margin-bottom: 10px;
+
+    @media (max-width: 1200px) {
+      font-size: 12.8px;
+    }
+  }
+  .industry-item {
+    font-size: 12px;
+    line-height: 24px;
+
+    @media (max-width: 1200px) {
+      font-size: 9.5px;
+      line-height: 15px;
+    }
+  }
+  button {
+    font-size: 14px;
+
+    @media (max-width: 1200px) {
+      font-size: 10px;
+    }
+  }
+  @media (max-width: 992px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 322px;
+    transform: translate(-50%, -50%);
+    z-index: 998;
+    display: none;
+    height: fit-content;
+  }
+  @media (max-width: 767px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 322px;
+    transform: translate(-50%, -50%);
+  }
+}
+.swiper-container {
+  h3 {
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+    font-weight: 700;
+
+    @media (max-width: 1200px) {
+      font-size: 12.8px;
+    }
+  }
+}
+.industry {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: -21px;
+    border-style: solid;
+    border-width: 8px;
+    border-color: white transparent transparent transparent;
+  }
+}
+
+// Radio Button
+
+.mid-selector label {
+  position: relative;
+  width: 80px;
+  &::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border: 7px solid #494949;
+    border-radius: 50%;
+    left: -28px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999999;
+  }
+}
+
+input[type="radio"] {
+  display: none;
+}
+input[type="radio"]:checked + label::before {
+  background-color: #53acff;
+}
+
+.swiper-slide.swiper-slide {
+  border-radius: 10px;
+  text-align: center;
+  padding: 5px;
+  font-size: 13px;
+}
+.swiper-slide.swiper-slide-active {
+  background-color: #53acff !important;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+}
+.alert-icon {
+  @media (max-width: 1200px) {
+    display: none;
+  }
+}
+.radio-container {
+  h2 {
+    font-size: 15px;
+
+    @media (max-width: 1200px) {
+      font-size: 12.8px;
+    }
+  }
+}
+.docs {
+  p {
+    @media (max-width: 767px) {
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 15px;
+    }
+  }
+}
